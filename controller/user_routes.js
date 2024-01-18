@@ -5,7 +5,7 @@ const Review = require("../models/review");
 const ladnMarks = require("../models/landmar");
 const Facility = require("../models/facility.js");
 const bcrypt = require("bcryptjs");
-const nodemailer = require("nodeMailer");
+const nodemailer = require("nodemailer");
 var logger = require("../logs/logger");
 require("dotenv").config();
 const sendgridTransport = require("nodemailer-sendgrid-transport");
