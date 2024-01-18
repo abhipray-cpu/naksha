@@ -1,0 +1,127 @@
+<%- include('include/head.ejs') %>
+    <link rel="stylesheet" href="/css/addProperty.css">
+    <link rel="stylesheet" href="/css/top_nav_white.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/transition.css">
+
+    </head>
+
+    <body>
+        <% if(error) {%>
+            <div id="Error">
+                <h4>
+                    <%= error.msg %>
+                </h4>
+            </div>
+            <% } %>
+                <div id="main-body">
+                    <div id="header">
+                        <div id="navigation">
+                    </div>
+                    </div>
+                    <div id="container">
+                        <h2 id="title">Add property</h2>
+                        <form action="/registerProp" method="POST" enctype="multipart/form-data">
+                            <input type="hidden" value="<%= csrfToken %>" name="_csrf">
+                            <% if(error.param === 'prop_name') {%>
+                                <div class="error">
+                                    <input type="text" id="prop_name" name="prop_name" placeholder="Title">
+                                </div>
+                                <% } else {%>
+                                    <div class="entry">
+                                        <input type="text" id="prop_name" name="prop_name" placeholder="Title" value="<%= prop_name %>">
+                                    </div>
+                                    <% } %>
+                                        <div class="entry">
+                                            <input type="text" id="location" name="location" placeholder="Location:Add link to Gmaps" value="<%= location %>">
+                                        </div>
+                                        <div class="entry">
+                                            <input type="text" id="address" name="address" placeholder="Address" value="<%= address %>">
+                                        </div>
+                                        <div class="entry">
+                                            <input type="text" id="contact" name="contact" placeholder="Contact number" value="<%= contact %>">
+                                        </div>
+                                        <div class="entry">
+                                            <input type="mail" id="mail" name="mail" placeholder="email" value="<%= email %>">
+                                        </div>
+                                        <div class="entryImage">
+                                            <label for="image">Add an image</label>
+                                            <input type="file" id="image" name="image" value="<%= image %>">
+                                        </div>
+                                        <% if(error.param === 'description') {%>
+                                            <div class="error">
+                                                <textarea name="desc" id="desc" cols="45" rows="6">
+                                                 
+                                                </textarea>
+                                            </div>
+                                            <% } else {%>
+                                                <div class="entry">
+                                                    <textarea name="desc" id="desc" cols="45" rows="6">
+                                                        <%= desc %>
+                                                    </textarea>
+                                                </div>
+                                                <% } %>
+                                                    <div class="entry">
+                                                        <label for="prop">Choose  type:</label>
+
+                                                        <select name="prop" id="prop">
+                        <option value="Bar">Bar</option>
+                        <option value="Club">Club</option>
+                        <option value="Dance Club">Dance Studio</option>
+                        <option value="Amusement Park">Amusement Park</option>
+                        <option value="Banquet Hall">Banquet Hall</option>
+                        <option value="Zoo">ZOO</option>
+                        <option value="Gym">Gym</option>
+                        <option value="Hospital">Hospital</option>
+                        <option value="Game">Game</option>
+                        <option value="Hotel">Hotel</option>
+                        <option value="Mall">Mall</option>
+                        <option value="Multiplex">Multiplex</option>
+                        <option value="Park">Park</option>
+                        <option value="Restaurant">Restaurant</option>
+                        <option value="Street Food">Street Food</option>
+                        <option value="Yoga">Yoga</option>
+                        <option value="Cooking Class">Cooking Class</option>
+                        <option value="Badminton">Badminton</option>
+                        <option value="Basketball">Basketball</option>
+                        <option value="Cricket">Cricket</option>
+                        <option value="Football">Football</option>
+                        <option value="Tennis">Tennis</option>
+                        <option value="Baseball">Baseball</option>
+                        <option value="Golf">Golf</option>
+                        <option value="Hockey">Hockey</option>
+                        <option value="Karate">Karate</option>
+                        <option value="kick Boxing">Kick Boxing</option>
+                        <option value="Rugby">Rugby</option>
+                        <option value="Skating">Skating</option>
+                        <option value="Snooker">Snooker</option>
+                        <option value="Squash">Squash</option>
+                        <option value="Swimming">Swimming</option>
+                        <option value="Volleyball">Volleyball</option>
+                        <option value="Boxing">Boxing</option>
+                        <option value="Archery">Archery</option>
+                        <option value="Table Tennis">Table Tennis</option>
+                        <option value="Bowling">Bowling</option>
+                        <option value="Cycling">Cycling</option>
+                        
+                    </select>
+                                                    </div>
+
+
+                                                    <button type="submit" id="btn">Register</button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div class='light x1'></div>
+                <div class='light x2'></div>
+                <div class='light x3'></div>
+                <div class='light x4'></div>
+                <div class='light x5'></div>
+                <div class='light x6'></div>
+                <div class='light x7'></div>
+                <div class='light x8'></div>
+                <div class='light x9'></div>
+                <%- include('include/end.ejs')%>

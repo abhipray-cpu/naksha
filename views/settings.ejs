@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Settings</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/settings.css">
+</head>
+
+<body>
+    <div id="container">
+        <h2 id="title">Map settings</h2>
+        <form action="/setMap" method="POST">
+            <input type="hidden" value="<%= csrfToken %>" name="_csrf">
+            <div class="entry">
+                <label id="sortLabel">Sort</label>
+                <select name="sort" id="sort">
+                <option value="-1">Rating hight to low</option>
+                <option value="1">Rating low to high</option>
+               </select>
+            </div>
+            <div class="entry">
+                <label for="distance" id="distanceLabel">Distance</label>
+                <input type="range" name="distance" id="distance" min="0" max="100" class="slider">
+            </div>
+            <div class="entry">
+                <label for="rating" id="ratingLabel">Rating</label>
+                <input type="range" name="rating" id="rating" min="0" max="5" class="slider">
+            </div>
+            <div class="entry">
+                <label for="city" id="cityLabel">City</label>
+                <select name="city" id="city">
+                <% landmarks.forEach(landmark => {  %>
+                    <option value="<%= landmark.location %>"><%= landmark.city %></option>
+                    <% }) %>
+
+                        </select>
+            </div>
+            <button type="submit" id="btn">Set Map</button>
+        </form>
+        </select>
+    </div>
+</body>
+
+</html>

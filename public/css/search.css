@@ -1,0 +1,34 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: white;
+}
+
+#search {
+    margin-left: 3%;
+    margin-top: 10px;
+}
+
+#search input {
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: white;
+}
+
+#search input::placeholder {
+    color: white;
+    opacity: 1
+}
+
+#search input:focus,
+select:focus {
+    outline: none;
+}

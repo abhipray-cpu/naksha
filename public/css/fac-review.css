@@ -1,0 +1,166 @@
+@media only screen and (min-width:900px){
+    *::-webkit-scrollbar {
+        display: none;
+        visibility: hidden;
+    }
+    
+    body {
+        margin: 0px;
+        padding: 0px;
+        top: 0;
+        left: 0;
+        overflow-x: hidden !important;
+        width: 100vw;
+        min-height: 100vh;
+    }
+    
+    #container {
+        padding: 12px 16px;
+        border: 2px solid transparent;
+        border-radius: 30xp;
+        background-image: url("../images/home.jpg");
+        height: fit-content;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: fixed;
+        width: 100vw;
+        min-height: 100vw;
+    }
+    
+    #fac {
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 400;
+        font-size: 28px;
+    }
+    
+    #rates {
+        margin-left: 40vw;
+    }
+    
+    #row1 {
+        display: grid;
+        grid-template-columns: 11vw 20vw;
+        margin-bottom: 0px;
+    }
+    
+    #col1 h2 {
+        color: white;
+        font-size: 28px;
+        font-weight: bold;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-left: 2vw;
+        margin-top: 5px;
+    }
+    
+    #col1 h3 {
+        color: rgba(255, 255, 255, 0.522);
+        font-size: 23px;
+        font-weight: 500;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-bottom: 5px;
+    }
+    
+    #col2 {
+        padding-top: 4.5vh;
+    }
+    
+    .fa-star {
+        color: white;
+        text-decoration: none;
+        font-size: 28px;
+        color: white;
+        margin-right: 4px;
+        cursor: none;
+    }
+    
+    #basedON{
+        margin-top:-10px;margin-left:6vw;color: white; font-style: italic; font-weight: 300; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    }
+    .option {
+        display: flex;
+    }
+    #opt1{
+        margin-right:20px 
+    }
+    #opt2{margin-right:61px }
+    #opt3{margin-right:31px }
+    #opt4{margin-right:77px }
+    #opt5{margin-right:64px;}
+    .progress {
+        margin-left: 0px;
+        height: 10px;
+        width: 18vw;
+        margin-top: 4vh;
+        background-position: unset;
+    }
+    
+    .progress::-webkit-progress-value {
+        background: #F80068;
+    }
+    
+    .progress::-webkit-progress-bar {
+        background-color: #dcdcdc9c;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    }
+    
+    .option {
+        width: 40vw;
+        height: 10vh;
+    }
+    
+    .option h2 {
+        float: left;
+        color: white;
+        font-weight: 400;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    #reviews {
+        padding-left: 9px;
+    }
+    
+    .review {
+        width: 20vw;
+        height: fit-content;
+    }
+    
+    .review h2 {
+        color: white;
+        font-weight: 600;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: center
+    }
+    
+    .review p {
+        text-align: center;
+        color: white;
+        font-weight: 400;
+        font-style: italic;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+}
+
+/*need to add this styling I am not doing it now*/
+@media only screen and (max-width:479px){
+body{
+    left:0px;
+    top:0px;
+    background-image: url("../images/home_mobile.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: fixed;
+        width:100vw;
+        height:100vh;
+}
+#container{
+    width:100vw;
+height: 1000vh;
+
+}
+}

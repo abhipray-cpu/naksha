@@ -1,0 +1,130 @@
+<%- include('include/head.ejs') %>
+    <link rel="stylesheet" href="/css/facility.css">
+    <link rel="stylesheet" href="/css/search.css">
+    <link rel="stylesheet" href="/css/top_nav_white.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/transition.css">
+
+    </head>
+
+    <body style="background-image: url('<%= background_image %>')">
+
+
+        <div id="main-body">
+            <div id="header">
+
+                <div id="navigation">
+                    <%- include('include/top_nav.ejs')%>
+                        <%-include('include/side_nav.ejs')%>
+                        <%-include('include/side-mobile.ejs')%>
+                </div>
+            </div>
+            <% if (result.length > 0) { %>
+                <div class="grid-container">
+                    <% result.forEach(res => { %>
+                            <div class="grid-item" onclick="window.location='/details/<%=res.title%>'">
+                                <div class="col-md-4">
+                                    <div class="profile-card-6">
+                                        <img src="<%= res.image %>">
+                                        <div class="profile-name">
+                                            <%= res.title %>
+                                        </div>
+                                        <div class="profile-overview">
+                                            <div class="profile-overview">
+                                                <div class="row text-center">
+                                                    <div class="col-xs-4">
+                                                        <h3>
+                                                            <%= res.rating %>✰</h3>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <%  }) %>
+                </div>
+                <div id="pagination">
+                    <% if(hasPrevious > 1) { %>
+
+                        <a href="/<%= pageTitle %>?page=<%= currPage - 1 %>&row=prev">Prev</a>
+                        <% } %>
+
+                            <a href="/<%= pageTitle %>?page=<%= pages[0] %>&row=nan">
+                                <%= pages[0] %>
+                            </a>
+
+
+
+                            <a href="/<%= pageTitle %>?page=<%= pages[1] %>&row=nan">
+                                <%= pages[1] %>
+                            </a>
+
+
+                            <a href="/<%= pageTitle %>?page=<%= pages[2] %>&row=nan">
+                                <%= pages[2] %>
+                            </a>
+
+
+
+                            <a href="/<%= pageTitle %>?page=<%= pages[3] %>&row=nan">
+                                <%= pages[3] %>
+                            </a>
+
+
+
+                            <a href="/<%= pageTitle %>?page=<%= pages[4] %>&row=nan">
+                                <%= pages[4] %>
+                            </a>
+
+
+
+                            <a href="/<%= pageTitle %>?page=<%= pages[5] %>&row=nan">
+                                <%= pages[5] %>
+                            </a>
+
+
+
+                            <a href="/<%= pageTitle %>?page=<%= pages[6] %>&row=nan">
+                                <%= pages[6] %>
+                            </a>
+
+
+
+                            <a href="/<%= pageTitle %>?page=<%= pages[7] %>&row=nan">
+                                <%= pages[7] %>
+                            </a>
+
+
+
+                            <a href="/<%= pageTitle %>?page=<%= pages[8] %>&row=nan">
+                                <%= pages[8] %>
+                            </a>
+
+
+
+                            <a href="/<%= pageTitle %>?page=<%= pages[9] %>&row=nan">
+                                <%= pages[9] %>
+                            </a>
+
+
+
+
+                            <a href="/<%= pageTitle %>?page=<%= next %>&row=next">Next</a>
+
+                </div>
+                <% } else { %>
+                    <div style="background-color:rgba(0,0,0,0.6);">
+                        <h2 style="color:white;margin-top:20vh;text-align:center;font-size:28px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-style: italic;">There are no facilities nearby you can increase the search range in <a href="/settings" style="text-decoration:underline;color:white;font-size:32px;">map settings</a></h2>
+                    </div>
+                    <%  } %>
+
+        </div>
+
+
+
+        <%- include('include/end.ejs')%>

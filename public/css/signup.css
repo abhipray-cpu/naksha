@@ -1,0 +1,206 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    overflow: hidden !important;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 60vw 40vw;
+    position: absolute;
+    z-index: 0;
+}
+
+#pic {
+    position: relative;
+    width: 60vw;
+    height: 100vh;
+}
+
+#icon {
+    position: absolute;
+    left: 25vw;
+    top: 1.5vh;
+    z-index: 1;
+}
+
+#login {
+    top: 1.5vh;
+    margin-left: 16.5vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 58px;
+    /* identical to box height */
+    color: rgba(83, 81, 81, 0.97);
+    margin-bottom: 10vh;
+}
+
+.input {
+    position: relative;
+    width: 26vw;
+    height: 28px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.379);
+    margin-left: 8vw;
+    margin-top: 5vh;
+    padding-top: 0;
+    padding-bottom: 1px;
+}
+
+.input input,
+.input input:-webkit-autofill:hover,
+.input input:-webkit-autofill:focus,
+.input input:-webkit-autofill:active {
+    border: none;
+    outline: none;
+    width: 23vw;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgba(0, 0, 0, 0.745);
+}
+
+svg {
+    margin-left: 0.25vw;
+}
+
+#button {
+    border: none;
+    margin-top: 5vh;
+    margin-left: 11.5vw;
+    width: 20vw;
+    height: 5vh;
+    border-radius: 5px;
+    background-color: rgba(192, 13, 135, 0.813);
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 1px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.393);
+}
+
+#button:hover {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.212);
+}
+
+#alternate {
+    margin-top: 10vh;
+    margin-left: 25%;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+#strong {
+    font-size: 28px;
+    font-weight: 600;
+    font-style: normal;
+    color: rgba(160, 8, 160, 0.886);
+    cursor: pointer;
+}
+
+#strong a {
+    color: rgba(160, 8, 160, 0.886);
+}
+
+
+/*these are the error stylings*/
+
+.error {
+    position: relative;
+    width: 26vw;
+    height: 28px;
+    border-bottom: 1px solid red;
+    margin-left: 8vw;
+    margin-top: 5vh;
+    padding-top: 0;
+    padding-bottom: 1px;
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.error input,
+.error input:-webkit-autofill:hover,
+.error input:-webkit-autofill:focus,
+.error input:-webkit-autofill:active {
+    border: none;
+    outline: none;
+    width: 23vw;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgba(0, 0, 0, 0.745);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: white;
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+
+/*styling the error warnings*/
+
+.alert {
+    position: absolute;
+    top: 10px;
+    left: 40vw;
+    width: 12vw;
+    height: 6vh;
+    background-color: rgba(0, 0, 0, 0.71);
+    border-radius: 10px;
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    z-index: 1;
+}
+
+.alert h3 {
+    color: white;
+    text-align: center;
+    line-height: 3vh;
+    font-size: 18px;
+}

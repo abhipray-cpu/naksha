@@ -1,0 +1,438 @@
+/*this is the styling for the big screen*/
+@media only screen and (min-width:900px){
+    .grid-container {
+        margin-left: 10%;
+        display: inline-grid;
+        grid-template-columns: repeat(3, auto);
+        background-color: transparent;
+        width: 90% !important;
+        max-width: 90% !important;
+    }
+    
+    .grid-item {
+        width: 26vw;
+        height: 34vh;
+        background-color: transparent;
+        border: 1px solid transparent;
+        font-size: 30px;
+        text-align: center;
+        color: blue;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.52);
+        border-radius: 8px;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        padding: 0px;
+    }
+    
+    @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+    * {
+        font-family: Roboto, sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+    
+    
+    
+    .profile-card-6 {
+        width: 26vw;
+        height: 34vh;
+        background-color: transparent;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        border-radius: 8px;
+        margin: 0px;
+    }
+    
+    .profile-card-6 img {
+        transition: all 0.15s linear;
+        width: 26vw;
+        height: 34vh;
+        border-radius: 8px;
+    }
+    
+    .profile-card-6 .profile-name {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        color: #FFF;
+        padding: 15px 20px;
+        background: linear-gradient(140deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0) 50%);
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-position {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.4);
+        left: 30px;
+        top: 100px;
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-overview {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0));
+        color: #FFF;
+        padding: 50px 0px 20px 0px;
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-overview h3 {
+        font-weight: bold;
+        margin-left: 50px;
+        bottom: 2;
+    }
+    
+    .profile-card-6 .profile-overview p {
+        color: rgba(255, 255, 255, 0.7);
+        margin: 2px;
+    }
+    
+    .profile-card-6:hover img {
+        filter: brightness(80%);
+    }
+    
+    .profile-card-6:hover .profile-name {
+        padding-left: 25px;
+        padding-top: 20px;
+    }
+    
+    .profile-card-6:hover .profile-position {
+        left: 40px;
+    }
+    
+    .profile-card-6:hover .profile-overview {
+        padding-bottom: 25px;
+    }
+}
+/*this is the styling for the small screen*/
+@media only screen and (max-width:479px){
+    .grid-container {
+        margin-left: 10%;
+        background-color: transparent;
+        width: 90% !important;
+        max-width: 90% !important;
+        margin-top:10vh;
+    }
+    
+    .grid-item {
+        width: 80vw;
+        height: 34vh;
+        background-color: transparent;
+        font-size: 30px;
+        text-align: center;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.52);
+        border-radius: 8px;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        padding: 0px;
+        margin-left:4vw;
+    }
+    
+    @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+    * {
+        font-family: Roboto, sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+    
+    
+    .profile-card-6 {
+        width: 80vw;
+        height: 34vh;
+        background-color: transparent;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        border-radius: 8px;
+        margin: 0px;
+    }
+    
+    .profile-card-6 img {
+        transition: all 0.15s linear;
+        width: 80vw;
+        height: 34vh;
+        border-radius: 8px;
+    }
+    
+    .profile-card-6 .profile-name {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        color: #FFF;
+        padding: 15px 20px;
+        background: linear-gradient(140deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0) 50%);
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-position {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.4);
+        left: 30px;
+        top: 100px;
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-overview {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0));
+        color: #FFF;
+        padding: 50px 0px 20px 0px;
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-overview h3 {
+        font-weight: bold;
+        margin-left: 50px;
+        bottom: 2;
+    }
+    
+    .profile-card-6 .profile-overview p {
+        color: rgba(255, 255, 255, 0.7);
+        margin: 2px;
+    }
+    
+    .profile-card-6:hover img {
+        filter: brightness(80%);
+    }
+    
+    .profile-card-6:hover .profile-name {
+        padding-left: 25px;
+        padding-top: 20px;
+    }
+    
+    .profile-card-6:hover .profile-position {
+        left: 40px;
+    }
+    
+    .profile-card-6:hover .profile-overview {
+        padding-bottom: 25px;
+    }
+}
+
+@media only screen and (min-width:481px) and (max-width:768px){
+    .grid-container {
+        margin-left: 10%;
+        background-color: transparent;
+        width: 90% !important;
+        max-width: 90% !important;
+        margin-top:10vh;
+    }
+    
+    .grid-item {
+        width: 80vw;
+        height: 34vh;
+        background-color: transparent;
+        font-size: 30px;
+        text-align: center;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.52);
+        border-radius: 8px;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        padding: 0px;
+        margin-left:4vw;
+    }
+    
+    @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+    * {
+        font-family: Roboto, sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+    
+    
+    .profile-card-6 {
+        width: 80vw;
+        height: 34vh;
+        background-color: transparent;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        border-radius: 8px;
+        margin: 0px;
+    }
+    
+    .profile-card-6 img {
+        transition: all 0.15s linear;
+        width: 80vw;
+        height: 34vh;
+        border-radius: 8px;
+    }
+    
+    .profile-card-6 .profile-name {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        color: #FFF;
+        padding: 15px 20px;
+        background: linear-gradient(140deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0) 50%);
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-position {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.4);
+        left: 30px;
+        top: 100px;
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-overview {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0));
+        color: #FFF;
+        padding: 50px 0px 20px 0px;
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-overview h3 {
+        font-weight: bold;
+        margin-left: 50px;
+        bottom: 2;
+    }
+    
+    .profile-card-6 .profile-overview p {
+        color: rgba(255, 255, 255, 0.7);
+        margin: 2px;
+    }
+    
+    .profile-card-6:hover img {
+        filter: brightness(80%);
+    }
+    
+    .profile-card-6:hover .profile-name {
+        padding-left: 25px;
+        padding-top: 20px;
+    }
+    
+    .profile-card-6:hover .profile-position {
+        left: 40px;
+    }
+    
+    .profile-card-6:hover .profile-overview {
+        padding-bottom: 25px;
+    }
+}
+@media only screen and (min-width:769px) and (max-width:899px){
+    .grid-container {
+        margin-left: 8vw;
+        display: inline-grid;
+        grid-template-columns: repeat(2, auto);
+        background-color: transparent;
+        width: 90vw !important;
+    }
+    
+    .grid-item {
+        width: 43vw;
+        height: 34vh;
+        background-color: transparent;
+        border: 1px solid transparent;
+        font-size: 30px;
+        text-align: center;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.52);
+        border-radius: 8px;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        padding: 0px;
+    }
+    
+    @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+    * {
+        font-family: Roboto, sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+    
+    
+    
+    .profile-card-6 {
+        height: 34vh;
+        background-color: transparent;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        border-radius: 8px;
+        margin: 0px;
+    }
+    
+    .profile-card-6 img {
+        transition: all 0.15s linear;
+        width: 43vw;
+        height: 34vh;
+        border-radius: 8px;
+    }
+    
+    .profile-card-6 .profile-name {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        color: #FFF;
+        padding: 15px 20px;
+        background: linear-gradient(140deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0) 50%);
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-position {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.4);
+        left: 30px;
+        top: 100px;
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-overview {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0));
+        color: #FFF;
+        padding: 50px 0px 20px 0px;
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-overview h3 {
+        font-weight: bold;
+        margin-left: 50px;
+        bottom: 2;
+    }
+    
+    .profile-card-6 .profile-overview p {
+        color: rgba(255, 255, 255, 0.7);
+        margin: 2px;
+    }
+    
+    .profile-card-6:hover img {
+        filter: brightness(80%);
+    }
+    
+    .profile-card-6:hover .profile-name {
+        padding-left: 25px;
+        padding-top: 20px;
+    }
+    
+    .profile-card-6:hover .profile-position {
+        left: 40px;
+    }
+    
+    .profile-card-6:hover .profile-overview {
+        padding-bottom: 25px;
+    }
+}

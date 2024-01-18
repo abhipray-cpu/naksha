@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title  %>
+    </title>
+    <link rel="stylesheet" href="/css/fac-review.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <div id="container">
+        <a href="/details/<%= facility %>" id="fac">
+            <h3>
+                <%= facility %>
+            </h3>
+        </a>
+        <div id="rates">
+            <div id="row1">
+                <div id="col1">
+                    <h3>Overall rating</h3>
+                    <h2>
+                        <%= avgRating %>✰</h2>
+                </div>
+                <div id="col2">
+                    <% if(avgRating >= 1) { %>
+                        <a href="#" class="fa fa-star" style="color:#F80068;" "></a>
+                <% } else { %>
+                    <a href="# " class="fa fa-star "></a>
+                    <% } %>
+                    <% if(avgRating >= 2 ) { %>
+                        <a href="# " class="fa fa-star " style="color:#F80068; " "></a>
+                        <% } else { %>
+                            <a href="# " class="fa fa-star "></a>
+                            <% } %>
+                                <% if(avgRating >= 3) { %>
+                                    <a href="#" class="fa fa-star" style="color:#F80068;" "></a>
+                <% } else { %>
+                    <a href="# " class="fa fa-star "></a>
+                    <% } %>
+                    <% if(avgRating >= 4) { %>
+                        <a href="# " class="fa fa-star " style="color:#F80068; " "></a>
+                                    <% } else { %>
+                                        <a href="# " class="fa fa-star "></a>
+                                        <% } %>
+                                            <% if(avgRating == 5) { %>
+                                                <a href="#" class="fa fa-star" style="color:#F80068;" "></a>
+                <% } else { %>
+                    <a href="# " class="fa fa-star "></a>
+                    <% } %>
+                </div>
+                
+                    
+              
+            </div>
+            <h4 style="margin-top:-10px;margin-left:6vw;color: white; font-style: italic; font-weight: 300; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">based on
+                <%= reviews.length%> reviews</h4>
+        <div id="breakup ">
+            <div class="option ">
+                <h2 class="catg " style="margin-right:20px ">Excellent</h2>
+                <progress class="progress " id="rate1 " value=<%= star1 %> max="100 "></progress>
+            </div>
+            <div class="option ">
+                <h2 class="catg " style="margin-right:61px ">Good</h2>
+                <progress class="progress " id="rate2 " value=<%= star2 %> max="100 "></progress>
+            </div>
+            <div class="option ">
+                <h2 class="catg " style="margin-right:31px ">Average</h2>
+                
+                <progress class="progress " id="rate3 " value=<%= star3 %> max=100></progress>
+                </div>
+                <div class="option ">
+                    <h2 class="catg " style="margin-right:77px ">Yuk</h2>
+                    <progress class="progress " id="rate4 " value=<%= star4 %> max="100 "></progress>
+                </div>
+                <div class="option ">
+                    <h2 style="margin-right:64px; ">Poor</h2>
+                    <progress class="progress " id="rate5 " value=<%= star5 %> max="100 "></progress>
+                </div>
+            </div>
+            <div id="reviews ">
+                <% reviews.forEach(review=>  { %>
+                    <div class="review ">
+                        <h2><strong><%= review.user.name %></strong> <span><%= review.rating %>✰</span> </h2>
+                        <p>
+                            <%= review.content %>
+                        </p>
+                    </div>
+                    <% }) %>
+            </div>
+        </div>
+</body>
+
+</html>

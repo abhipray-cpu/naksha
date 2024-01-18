@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= pageTitle %>
+    </title>
+    <link rel="stylesheet" href="/css/facility_item.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="row1">
+            <div id="image">
+                <img src="../<%= facility.image %>" alt="<%= facility.title %>">
+            </div>
+            <div id="details">
+                <div>
+                    <div id="rating">
+                        <h2>
+                            <%= facility.rating %> ☆
+                        </h2>
+
+
+                    </div>
+                    <div id="title">
+                        <%= facility.title %>
+                    </div>
+                </div>
+                <p id="about">
+
+                    <%= facility.description %>
+                </p>
+                <a href="<%= facility.Glocation %>" id="maps">
+                    <img src="/images/gmap.png" alt="map link">
+                </a>
+                <div id="contact">
+                    <h2 class="info"><strong class="strong">Contact:</strong>
+                        <%= contact %>
+                    </h2>
+                    <h2 class="info"><strong class="strong">Mail:</strong>
+                        <%= email %>
+                    </h2>
+                    <h2 class="info"><strong class="strong">Address:</strong>
+                        <%= address %>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div id="row2">
+            <h2 id="similarPlaces">Similar places</h2>
+            <div id="places">
+                <% if(facilities.length > 0) {  %>
+
+                    <% facilities.forEach((fac) =>{  %>
+                        <a href="/details/<%= fac.title %>" style="text-decoration: none;color:black" class="place">
+                            <div class="grid-item">
+                                <div class="col-md-4">
+                                    <div class="profile-card-6"><img src="/<%= fac.image  %>" alt="<%= fac.title %>" class="img img-responsive">
+                                        <div class="profile-name">
+                                            <%= fac.title %>
+                                        </div>
+                                        <div class="profile-overview">
+                                            <div class="profile-overview">
+                                                <div class="row text-center">
+                                                    <div class="col-xs-4">
+                                                        <h3>
+                                                            <%= fac.rating %> ☆</h3>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <% }) %>
+            </div>
+            <% } else { %>
+
+                <h2>No similar places this is one of a kind place!</h2>
+                <% } %>
+        </div>
+        <div id="row3">
+            <div id="comment">
+                <h3>Been to this place?Give your feedback</h3>
+                <div id="form">
+                    <form action="/addComment/<%= facility.title %>" method="POST">
+                        <input type="hidden" value="<%= csrfToken %>" name="_csrf">
+                        <div class="star-widget">
+                            <input type="radio" name="rate" id="rate-5" style="display:none" value="5">
+                            <label for="rate-5" class="fas fa-star"></label>
+                            <input type="radio" name="rate" id="rate-4" style="display:none" value="4">
+                            <label for="rate-4" class="fas fa-star"></label>
+                            <input type="radio" name="rate" id="rate-3" style="display:none" value="3">
+                            <label for="rate-3" class="fas fa-star"></label>
+                            <input type="radio" name="rate" id="rate-2" style="display:none" value="2">
+                            <label for="rate-2" class="fas fa-star"></label>
+                            <input type="radio" name="rate" id="rate-1" style="display:none" value="1">
+                            <label for="rate-1" class="fas fa-star"></label>
+                        </div>
+                        <textarea name="content" id="content" cols="80" rows="12" style="font-size:18px;">Have been to this place? Share your experience</textarea>
+                        <button type="Submit" id="btn">
+                              Submit
+                          </button>
+                    </form>
+                </div>
+            </div>
+            <div id="reviews">
+                <h3>Reviews</h3>
+                <% if(reviews.length > 0) { %>
+
+                    <% reviews.forEach(review => {%>
+                        <div class="comment">
+                            <h2 class="by">
+                                <%= review.user.name %> <span class="star"> <%= review.rating %> ☆</span></h2>
+                            <p class="text">
+                                <%= review.content %>
+                            </p>
+
+
+                        </div>
+
+                        <% }) %>
+                            <% } else { %>
+                                <h2 id="alternate">No comment is added be the first one</h2>
+                                <% } %>
+
+            </div>
+        </div>
+        <div id="mobileSpacing"></div>
+    </div>
+
+    </div>
+</body>
+
+</html>

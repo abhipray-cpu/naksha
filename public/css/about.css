@@ -1,0 +1,35 @@
+#cotainer {
+    padding: 12px 16px;
+}
+
+body {
+    overflow-x: hidden !important;
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url("../images/home.jpg");
+    height: fit-content;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: fixed;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#title {
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    font-style: italic;
+}
+
+#about {
+    color: rgb(0,0,0,1);
+    font-style: italic;
+    width: 80vw;
+    padding-left: 10vw;
+    line-height: 30px;
+    font-size: 20px;
+}

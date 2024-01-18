@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/review.css">
+</head>
+
+<body>
+    <div id="container">
+        <h2 id="header" id="headerTitle">Review Section</h2>
+        <% if(facilities.length > 0 ) { %>
+            <% facilities.forEach(facility=>{   %>
+                <div id="facilities" style="margin-top:15px">
+                    <a href="/facReview/<%=facility.title%>" id="forward">
+                        <div class="facility">
+                            <img src="/<%= facility.image %>" alt="<%= facility.title %>">
+                            <div id="details">
+                                <h1>
+                                    <%= facility.title %>
+                                </h1>
+
+                                <% if(facility.rating >= 4 ) { %>
+                                    <div class="rating" id="rating1">
+                                        <h4>4✩</h4>
+                                    </div>
+                                    <% } %>
+
+                                        <% if(facility.rating < 4 && facility.rating >=3 ) {%>
+                                            <div class="rating" id="rating2">
+                                                <h4>3✩</h4>
+                                            </div>
+                                            <% } %>
+                                                <% if(facility.rating < 3 && facility.rating >=2) {%>
+                                                    <div class="rating" id="rating3">
+                                                        <h4>2✩</h4>
+                                                    </div>
+                                                    <% } %>
+
+                                                        <% if(facility.rating < 2) {%>
+                                                            <div class="rating" id="rating4">
+                                                                <h4>1✩</h4>
+                                                            </div>
+                                                            <% } %>
+                            </div>
+
+                            <div id="reviews">
+                                <% if(facility.reviews.length>0) {%>
+                                    <% facility.reviews.forEach(review=>  {%>
+                                        <div class="review">
+                                            <h2>
+                                                <strong><%= review.rating %>✩</strong>
+                                                <span><%= review.user.name %></span>
+                                            </h2>
+                                            <p>
+                                                <%= review.content  %>
+                                            </p>
+                                        </div>
+                                        <% })  %>
+
+                                            <% }  else {%>
+                                                <h2 style="color:black;font-style:italic">No reviews found</h2>
+                                                <% } %>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <% }) %>
+                    <% } else { %>
+                        <h2 id="header" style="color:white;">You have added no facilities</h2>
+                        <a href="addProperty" id="add" style="text-align:center">Start by registering new facilities</a>
+                        <% } %>
+</body>
+
+</html>

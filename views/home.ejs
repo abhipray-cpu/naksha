@@ -1,0 +1,46 @@
+<%- include('include/head.ejs') %>
+<link rel='shortcut icon' type='image/x-icon' href='../favicon.ico' />
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/top_nav_white.css">
+    <link rel="stylesheet" href="/css/items_home.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="/css/baap.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/transition.css">
+    <link rel="stylesheet" href="/css/footer.css">
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+  </head>
+
+    <body>
+        <div id="main-body">
+
+            <div id="header">
+                <%- include('include/first-row.ejs')%>
+                    <div id="navigation">
+
+                        <%- include('include/top_nav.ejs') %>
+                            <%-include('include/side_nav.ejs')%>
+                            <%-include('include/side-mobile.ejs')%>
+                    </div>
+
+            </div>
+            <div class="grid-container">
+                <% types.forEach(type =>{ %>
+                    <div class="grid-item">
+                        <div class="profile-card-6">
+                            <img src='<%= type.Wallpaper %>' onclick="window.location='<%= type.link %>'">
+                            <div class="profile-name">
+                                <%= type.title %>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+
+
+        </div>
+        <%-include('include/footer.ejs')%>
+        <%- include('include/end.ejs')%>

@@ -1,0 +1,57 @@
+<%- include('include/head.ejs') %>
+    <link rel="stylesheet" href="/css/facility.css">
+    <link rel="stylesheet" href="/css/search.css">
+    <link rel="stylesheet" href="/css/admin_service.css">
+    <link rel="stylesheet" href="/css/top_nav_white.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/transition.css">
+    </head>
+
+    <body>
+        <div id="main-body">
+            <div id="header">
+                <div id="navigation">
+                    <%- include('include/top_nav.ejs')%>
+                </div>
+            </div>
+            <h2 id="title">Your facilities</h2>
+            <%- include('include/side_nav.ejs')%>
+            <%- include('include/side-mobile.ejs')%>
+            <% if(facilities.length > 0) { %>
+                <div class="grid-container">
+                    <% facilities.forEach(facility => { %>
+                        <!--need to modify this link to control the admin control page-->
+                        
+                        <div class="grid-item" onclick="window.location='/details/<%= facility.title %>'">
+                            <div class="col-md-4">
+                                <div class="profile-card-6"><img src="<%= facility.image %>" class="img img-responsive">
+                                    <div class="profile-name">
+                                        <%= facility.title %>
+                                    </div>
+                                    <div class="profile-overview">
+                                        <div class="profile-overview">
+                                            <div class="row text-center">
+                                                <div class="col-xs-4">
+                                                    <h3>
+                                                        <%= facility.rating %>✰</h3>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <% }) %>
+                </div>
+                <% } else { %>
+
+                    <%- include('include/items.ejs')%>
+                        <% } %>
+
+        </div>
+
+
+        <%- include('include/end.ejs')%>

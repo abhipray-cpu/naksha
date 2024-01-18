@@ -1,0 +1,604 @@
+@media only screen and (min-width:900px){
+    #main-body {
+        height: fit-content !important;
+        max-height: 100%;
+        padding: 12px 16px;
+        border: 2px solid transparent;
+        border-radius: 30xp;
+        overflow-x: hidden !important;
+    }
+    
+    body {
+        margin: 0;
+        overflow: auto;
+        width: 100vw;
+        height: fit-content !important;
+        height: fit-content;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: fixed;
+    }
+    
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .grid-container {
+        margin-left: 4%;
+        display: inline-grid;
+        grid-template-columns: repeat(3, auto);
+        background-color: transparent;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .grid-item {
+        width: 26vw;
+        height: 36vh;
+        background-color: transparent;
+        border: 1px solid transparent;
+        font-size: 30px;
+        text-align: center;
+        color: blue;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.52);
+        border-radius: 8px;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        padding: 0px;
+    }
+    
+    @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+    * {
+        font-family: Roboto, sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .row-heading h2 {
+        color: white;
+    }
+    
+    .all {
+        width: 50px;
+        height: 50px;
+        margin-top: 20px;
+        margin-top: 150px;
+    }
+    
+    .all a {
+        height: 10px;
+        width: 10px;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
+    
+    .all:hover a {
+        font-size: 30px;
+    }
+    
+    .profile-card-6 {
+        width: 26vw;
+        height: 36vh;
+        background-color: transparent;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        border-radius: 8px;
+        margin: 0px;
+    }
+    
+    .profile-card-6 img {
+        transition: all 0.15s linear;
+        width: 26vw;
+        height: 36vh;
+        border-radius: 8px;
+    }
+    
+    .profile-card-6 .profile-name {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        color: #FFF;
+        padding: 15px 20px;
+        background: linear-gradient(140deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0) 50%);
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-position {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.4);
+        left: 30px;
+        top: 100px;
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-overview {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0));
+        color: #FFF;
+        padding: 50px 0px 20px 0px;
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-overview h3 {
+        font-weight: bold;
+        margin-left: 50px;
+        bottom: 2;
+    }
+    
+    .profile-card-6 .profile-overview p {
+        color: rgba(255, 255, 255, 0.7);
+        margin: 2px;
+    }
+    
+    .profile-card-6:hover img {
+        filter: brightness(80%);
+    }
+    
+    .profile-card-6:hover .profile-name {
+        padding-left: 25px;
+        padding-top: 20px;
+    }
+    
+    .profile-card-6:hover .profile-position {
+        left: 40px;
+    }
+    
+    .profile-card-6:hover .profile-overview {
+        padding-bottom: 25px;
+    }
+    
+    #pagination {
+        margin-left: 30%;
+        margin-top: 10px;
+        padding: 2px;
+        margin-bottom: 30px;
+        background-color: transparent
+    }
+    
+    #pagination a {
+        text-decoration: none;
+        border: 2px solid white;
+        font-size: xx-large;
+        height: 80px;
+        width: 72px;
+        margin-left: 10px;
+        margin-right: 10px;
+        color: white;
+        padding: 2px
+    }
+    
+    #pagination a:hover,
+    #pagination a:active {
+        background-color: white;
+        color: black
+    }
+}
+
+@media only screen and (max-width:480px){
+    #main-body {
+        min-height: 100vh !important;
+        padding: 12px 16px;
+        border: 2px solid transparent;
+        border-radius: 30xp;
+        overflow-x: hidden !important;
+    }
+    
+    body {
+        margin: 0;
+        overflow: auto;
+        width: 100vw;
+        min-height:100vh !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: fixed;
+    }
+    
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    .grid-container {
+        background-color: transparent;
+        width: 9vw !important;
+        margin-top:5vh;
+    }
+    
+    .grid-item {
+        width:90vw;
+        height: 34vh;
+        background-color: transparent;
+        font-size: 30px;
+        text-align: center;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.52);
+        border-radius: 8px;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        padding: 0px;
+        margin-left:3.5vw;
+        margin-right:2.5vw;
+    }
+    
+    @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+    * {
+        font-family: Roboto, sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+    
+    
+    .profile-card-6 {
+        width: 90vw;
+        height: 34vh;
+        background-color: transparent;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        border-radius: 8px;
+        margin: 0px;
+    }
+    
+    .profile-card-6 img {
+        transition: all 0.15s linear;
+        width: 90vw;
+        height: 34vh;
+        border-radius: 8px;
+    }
+    
+    .profile-card-6 .profile-name {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        color: #FFF;
+        padding: 15px 20px;
+        background: linear-gradient(140deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0) 50%);
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-position {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.4);
+        left: 30px;
+        top: 100px;
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-overview {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0));
+        color: #FFF;
+        padding: 50px 0px 20px 0px;
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-overview h3 {
+        font-weight: bold;
+        margin-left: 50px;
+        bottom: 2;
+    }
+    
+    .profile-card-6 .profile-overview p {
+        color: rgba(255, 255, 255, 0.7);
+        margin: 2px;
+    }
+    
+    .profile-card-6:hover img {
+        filter: brightness(80%);
+    }
+    
+    .profile-card-6:hover .profile-name {
+        padding-left: 25px;
+        padding-top: 20px;
+    }
+    
+    .profile-card-6:hover .profile-position {
+        left: 40px;
+    }
+    
+    .profile-card-6:hover .profile-overview {
+        padding-bottom: 25px;
+    }
+
+}
+@media only screen and (min-width:481px) and (max-width:768px){
+    #main-body {
+        min-height: 100vh !important;
+        padding: 3px;
+        overflow-x: hidden !important;
+    }
+    
+    body {
+        margin: 0;
+        overflow: auto;
+        width: 100vw;
+        min-height:100vh !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: fixed;
+    }
+    
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    .grid-container {
+        background-color: transparent;
+        width: 90vw !important;
+        margin-top:5vh;
+    }
+    
+    .grid-item {
+        width:80vw;
+        height: 34vh;
+        background-color: transparent;
+        font-size: 30px;
+        text-align: center;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.52);
+        border-radius: 8px;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        padding: 0px;
+        margin-left:16.5vw;
+        margin-right:4.5vw;
+    }
+    
+    @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+    * {
+        font-family: Roboto, sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+    
+    
+    .profile-card-6 {
+        width: 80vw;
+        height: 34vh;
+        background-color: transparent;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        border-radius: 8px;
+        margin: 0px;
+    }
+    
+    .profile-card-6 img {
+        transition: all 0.15s linear;
+        width: 80vw;
+        height: 34vh;
+        border-radius: 8px;
+    }
+    
+    .profile-card-6 .profile-name {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        color: #FFF;
+        padding: 15px 20px;
+        background: linear-gradient(140deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0) 50%);
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-position {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.4);
+        left: 30px;
+        top: 100px;
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-overview {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0));
+        color: #FFF;
+        padding: 50px 0px 20px 0px;
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-overview h3 {
+        font-weight: bold;
+        margin-left: 50px;
+        bottom: 2;
+    }
+    
+    .profile-card-6 .profile-overview p {
+        color: rgba(255, 255, 255, 0.7);
+        margin: 2px;
+    }
+    
+    .profile-card-6:hover img {
+        filter: brightness(80%);
+    }
+    
+    .profile-card-6:hover .profile-name {
+        padding-left: 25px;
+        padding-top: 20px;
+    }
+    
+    .profile-card-6:hover .profile-position {
+        left: 40px;
+    }
+    
+    .profile-card-6:hover .profile-overview {
+        padding-bottom: 25px;
+    }
+
+}
+@media only screen and (min-width:769px) and (max-width:899px) {
+    #main-body {
+        height: fit-content !important;
+        max-height: 100%;
+        padding: 12px 16px;
+        border: 2px solid transparent;
+        border-radius: 30xp;
+        overflow-x: hidden !important;
+    }
+    
+    body {
+        margin: 0;
+        overflow: auto;
+        width: 100vw;
+        height: fit-content !important;
+        height: fit-content;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: fixed;
+    }
+    
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .grid-container {
+        margin-left: 8vw;
+        display: inline-grid;
+        grid-template-columns: repeat(2, auto);
+        background-color: transparent;
+        width: 90vw !important;
+    }
+    
+    .grid-item {
+        width: 43vw;
+        height: 34vh;
+        background-color: transparent;
+        border: 1px solid transparent;
+        font-size: 30px;
+        text-align: center;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.52);
+        border-radius: 8px;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        padding: 0px;
+    }
+    
+    @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+    * {
+        font-family: Roboto, sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+    
+    
+    
+    .profile-card-6 {
+        height: 34vh;
+        background-color: transparent;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        border-radius: 8px;
+        margin: 0px;
+    }
+    
+    .profile-card-6 img {
+        transition: all 0.15s linear;
+        width: 43vw;
+        height: 34vh;
+        border-radius: 8px;
+    }
+    
+    
+    .profile-card-6 .profile-name {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        color: #FFF;
+        padding: 15px 20px;
+        background: linear-gradient(140deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0) 50%);
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-position {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.4);
+        left: 30px;
+        top: 100px;
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-overview {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0));
+        color: #FFF;
+        padding: 50px 0px 20px 0px;
+        transition: all 0.15s linear;
+    }
+    
+    .profile-card-6 .profile-overview h3 {
+        font-weight: bold;
+        margin-left: 50px;
+        bottom: 2;
+    }
+    
+    .profile-card-6 .profile-overview p {
+        color: rgba(255, 255, 255, 0.7);
+        margin: 2px;
+    }
+    
+    .profile-card-6:hover img {
+        filter: brightness(80%);
+    }
+    
+    .profile-card-6:hover .profile-name {
+        padding-left: 25px;
+        padding-top: 20px;
+    }
+    
+    .profile-card-6:hover .profile-position {
+        left: 40px;
+    }
+    
+    .profile-card-6:hover .profile-overview {
+        padding-bottom: 25px;
+    }
+    
+    #pagination {
+        margin-left: 10vw;
+        margin-right:10vw;
+        margin-top: 10px;
+        padding: 2px;
+        margin-bottom: 30px;
+        background-color: transparent;
+        width:80vw;
+    }
+    
+    #pagination a {
+        text-decoration: none;
+        border: 2px solid white;
+        font-size: xx-large;
+        height: 80px;
+        width: 72px;
+        margin-left: 10px;
+        margin-right: 10px;
+        color: white;
+        padding: 2px
+    }
+    
+    #pagination a:hover,
+    #pagination a:active {
+        background-color: white;
+        color: black
+    }
+}

@@ -1,0 +1,519 @@
+@media only screen and (min-width:900px)
+{
+    *::-webkit-scrollbar {
+        display: none;
+    }
+    
+    #container {
+        padding: 12px 16px;
+        border: 2px solid transparent;
+        background-image: url("../images/home_mobile.png");
+        height: fit-content;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: fixed;
+        width: 100vw;
+        min-height: 100vh;
+    }
+    
+    body {
+        overflow-x: hidden !important;
+        margin: 0px;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+    
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    
+    #header {
+        text-align: center;
+        color: black;
+        font-weight: 500;
+        font-size: 21px;
+    }
+    
+    #facilities {
+        width: 94vw;
+        margin-left: 2vw;
+    }
+    
+    .facility {
+        width: 94vw;
+        border-bottom: 1px solid black;
+        display: grid;
+        grid-template-columns: 17vw 17vw 35vw;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        margin-bottom: 4vh;
+    }
+    
+    .facility img {
+        width: 15vw;
+        height: 20vh;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.503);
+        border-radius: 4px;
+    }
+    
+    #details h1 {
+        color: black;
+        font-weight: 500;
+        font-size: 23px;
+        max-height: 3vh;
+        overflow: hidden !important;
+    }
+    
+    
+    /*rating colors*/
+    
+    #rating1 {
+        background-color: #1AA417;
+    }
+    
+    #rating2 {
+        background-color: #FFBE00;
+    }
+    
+    #rating3 {
+        background-color: #FF7A00;
+    }
+    
+    #rating4 {
+        background-color: #EA4335;
+    }
+    
+    .rating {
+        position: absolute;
+        width: 97px;
+        height: 85px;
+        border-radius: 10px;
+    }
+    
+    .rating h4 {
+        color: white;
+        text-align: center;
+        line-height: 28px;
+        font-style: italic;
+        font-size: 22px;
+    }
+    
+    #reviews {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+    }
+    
+    .review {
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 15vw;
+        height: 140px;
+        overflow: hidden !important;
+    }
+    
+    .review h2 {
+        color: black;
+        font-weight: 400;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .review p {
+        color: black;
+        font-style: italic;
+    }
+    
+    #add {
+        text-decoration: none;
+        color: black;
+        font-style: italic;
+        text-align: center;
+    }
+    
+    #forward {
+        text-decoration: none;
+    }
+}
+
+@media only screen and (max-width:480px)
+{
+    *::-webkit-scrollbar {
+        display: none;
+    }
+    
+    #container {
+        padding: 2px;
+        background-image: url("../images/home_medium.png");
+        height: fit-content;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: fixed;
+        width: 100vw;
+        min-height: 100vh;
+    }
+    
+    body {
+        overflow-x: hidden !important;
+        margin: 0px;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+    
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    
+    #header {
+        text-align: center;
+        color: black;
+        font-weight: 500;
+        font-size: 21px;
+    }
+    
+    #facilities {
+        width: 90vw;
+        margin-left: 2.5vw;
+    }
+    
+    .facility {
+        width: 90vw;
+        border-bottom: 1px solid black;
+        display: grid;
+        grid-template-columns: 40vw 60vw;
+        padding-bottom: 10px;
+        padding-left: 0px;
+        margin-bottom: 4vh;
+    }
+    
+    .facility img {
+        width: 40vw;
+        height: 20vh;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.503);
+        border-radius: 4px;
+    }
+    
+    #details h1 {
+        color: black;
+        font-weight: 500;
+        font-size: 23px;
+        max-height: 10vh;
+        overflow: hidden !important;
+        margin-left:2vw;
+    }
+    
+    
+    /*rating colors*/
+    
+    #rating1 {
+        background-color: #1AA417;
+    }
+    
+    #rating2 {
+        background-color: #FFBE00;
+    }
+    
+    #rating3 {
+        background-color: #FF7A00;
+    }
+    
+    #rating4 {
+        background-color: #EA4335;
+    }
+    
+    .rating {
+        position: absolute;
+        width: 50vw;
+        height: 15vw;
+        border-radius: 10px;
+        margin-left:2.5vw;
+    }
+    
+    .rating h4 {
+        color: white;
+        text-align: center;
+        font-style: italic;
+        font-size: 22px;
+    }
+    
+    #reviews {
+        display: none;
+      
+    }
+    #add {
+        text-decoration: none;
+        color: black;
+        font-style: italic;
+        text-align: center;
+    }
+    
+    #forward {
+        text-decoration: none;
+    }
+   
+}
+
+@media only screen and (min-width:481px) and (max-width:768px)
+{
+    *::-webkit-scrollbar {
+        display: none;
+    }
+    #headerTitle{
+        font-size:32px;
+        text-align:center;
+        margin-top:10px;
+    }
+    #container {
+        padding: 2px;
+        background-image: url("../images/home_larger.png");
+        height: fit-content;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: fixed;
+        width: 100vw;
+        min-height: 100vh;
+    }
+    
+    body {
+        overflow-x: hidden !important;
+        margin: 0px;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+    
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    
+    #header {
+        text-align: center;
+        color: black;
+        font-weight: 500;
+        font-size: 21px;
+    }
+    
+    #facilities {
+        width: 90vw;
+        margin-left: 2.5vw;
+    }
+    
+    .facility {
+        width: 90vw;
+        border-bottom: 1px solid black;
+        display: grid;
+        grid-template-columns: 40vw 60vw;
+        padding-bottom: 10px;
+        padding-left: 0px;
+        margin-bottom: 4vh;
+    }
+    
+    .facility img {
+        width: 40vw;
+        height: 20vh;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.503);
+        border-radius: 4px;
+    }
+    
+    #details h1 {
+        color: black;
+        font-weight: 500;
+        font-size: 23px;
+        max-height: 10vh;
+        overflow: hidden !important;
+        margin-left:2vw;
+    }
+    
+    
+    /*rating colors*/
+    
+    #rating1 {
+        background-color: #1AA417;
+    }
+    
+    #rating2 {
+        background-color: #FFBE00;
+    }
+    
+    #rating3 {
+        background-color: #FF7A00;
+    }
+    
+    #rating4 {
+        background-color: #EA4335;
+    }
+    
+    .rating {
+        position: absolute;
+        width: 50vw;
+        height: 10vh;
+        border-radius: 10px;
+        margin-left:2.5vw;
+    }
+    
+    .rating h4 {
+        color: white;
+        text-align: center;
+        font-style: italic;
+        font-size: 22px;
+    }
+    
+    #reviews {
+        display: none;
+      
+    }
+    #add {
+        text-decoration: none;
+        color: black;
+        font-style: italic;
+        text-align: center;
+    }
+    
+    #forward {
+        text-decoration: none;
+    }
+   
+}
+@media only screen and (min-width:769px) and (max-width:899px)
+{
+    *::-webkit-scrollbar {
+        display: none;
+    }
+   
+    #container {
+        padding: 12px 16px;
+        background-image: url("../images/home.jpg");
+        height: fit-content;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: fixed;
+        width: 100vw;
+        min-height: 100vh;
+    }
+    
+    body {
+        overflow-x: hidden !important;
+        margin: 0px;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+    
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    #headerTitle{
+        text-align: center;
+        font-weight: 800;
+        font-size:32px;
+        color:black;
+    }
+    
+    #facilities {
+        width: 96vw;
+        margin-left: 2vw;
+        margin-right:2vw;
+    }
+    
+    .facility {
+        width: 96vw;
+        border-bottom: 1px solid black;
+        display: grid;
+        grid-template-columns: 30vw 20vw 46vw;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        margin-bottom: 4vh;
+    }
+    
+    .facility img {
+        width: 28vw;
+        height: 25vh;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.503);
+        border-radius: 4px;
+    }
+    
+    #details h1 {
+        color: black;
+        font-weight: 500;
+        font-size: 28px;
+        max-height: 10vh;
+        overflow: hidden !important;
+    }
+    
+    
+    /*rating colors*/
+    
+    #rating1 {
+        background-color: #1AA417;
+    }
+    
+    #rating2 {
+        background-color: #FFBE00;
+    }
+    
+    #rating3 {
+        background-color: #FF7A00;
+    }
+    
+    #rating4 {
+        background-color: #EA4335;
+    }
+    
+    .rating {
+        position: absolute;
+        width: 117px;
+        height: 105px;
+        border-radius: 10px;
+    }
+    
+    .rating h4 {
+        color: white;
+        text-align: center;
+        line-height: 28px;
+        font-style: italic;
+        font-size: 29px;
+    }
+    
+    #reviews {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+    }
+    
+    .review {
+        margin-left: 30px;
+        margin-right: 10px;
+        width: 30vw;
+        height: 140px;
+        overflow: hidden !important;
+    }
+    
+    .review h2 {
+        color: black;
+        font-weight: 400;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .review p {
+        color: black;
+        font-style: italic;
+    }
+    
+    #add {
+        text-decoration: none;
+        color: black;
+        font-style: italic;
+        text-align: center;
+    }
+    
+    #forward {
+        text-decoration: none;
+    }
+}

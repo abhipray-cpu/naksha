@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <% if(error1.length>0){ %>
+        <div class="alert">
+            <h3>No such user found you !!</h3>
+        </div>
+        <% } %>
+            <% if(error2.length>0) { %>
+                <div class="alert">
+                    <h3>Wrong password !!</h3>
+                </div>
+                <% } %>
+                    <div id="container">
+                        <div id="wallpaper">
+                            <img src="/images/wallpaper.png" alt="world" id="pic">
+                            <% if( error1 == '' && error2 == '' ) {%>
+                                <img src="/images/icon1.png" alt="icon" id="icon">
+                                <% } %>
+                        </div>
+                        <div id="form">
+                            <div id="login">
+                                <h1>Login</h1>
+                                <h3 id="smallOnly">Please signin to continue</h3>
+                            </div>
+                            <form action="/validateUser" method='POST'>
+                                <input type="hidden" value="<%= csrfToken %>" name="_csrf">
+                                <% if(error1.length > 0) {%>
+                                    <div class="error">
+                                        <input type="text" id="user_name" name="user_name" placeholder="Username">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                    </div>
+                                    <% } else {%>
+                                        <div class="input">
+                                            <input type="text" id="user_name" name="user_name" placeholder="Username" value="<%= user %>">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                        </div>
+                                        <% } %>
+                                            <% if(error2.length > 0) {%>
+                                                <div class="error">
+                                                    <input type="password" id="password" name="password" placeholder="Password">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                                                </div>
+                                                <% } else {%>
+                                                    <div class="input">
+                                                        <input type="password" name="password" id="username" placeholder="Password">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                                                    </div>
+                                                    <% } %>
+
+                                                        <div id="thumb">
+                                                            <div id="check">
+                                                                <input type="checkbox" style="width:17px;height:17px;">
+                                                                <!--need to store the user credentials or some sort of auth token in the browser cache-->
+                                                                <h3>Remember me</h3>
+                                                            </div>
+                                                            <div id="forget">
+                                                                <a href="/change_password">
+                                                                forgot password?
+                                                              </a>
+                                                            </div>
+
+                                                        </div>
+                                                        <button type="submit" id="button">Login</button>
+                            </form>
+                            <div id="links">
+                                <!---need to deign these pages as well to display these information-->
+                                <span> <a href="/about" class="jump">About</a>
+                <a href="/user-policy" class="jump">User policy</a>
+                <a href="/terms" class="jump">Terms and service</a>
+                <a href="/cache" class="jump">Cache Policy</a></span>
+                            </div>
+                            <h2 id="alternate">Dont't have an account? <span id="strong"> <a href="/signup" style="text-decoration:none">Signup</a></span></h2>
+                        </div>
+
+                    </div>
+</body>
+
+
+</html>
